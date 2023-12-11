@@ -1,0 +1,40 @@
+<div>POST to https://fcde83ce-ae2a-4165-bf7f-c2bb5f7fe762.mock.pstmn.io/webhooks</div>
+
+<h4>Body</h4>
+<div>
+    <pre class="preformated-text">
+{
+    &quot;webhook_url&quot;: &quot;https://api.example.com/webhooks/listener-for-payment-gateway&quot;,
+    &quot;events&quot;: [
+        &quot;payment.created&quot;,
+        &quot;payment.updated&quot;,
+        &quot;transaction.created&quot;,
+        &quot;transaction.updated&quot;,
+        &quot;refund.created&quot;,
+        &quot;refund.updated&quot;
+    ]
+}    </pre>
+</div>
+
+<h4>Headers</h4>
+<div>
+        <div>Accept: */*</div>
+        <div>Content-Type: application/json</div>
+</div>
+
+
+
+<h4>Curl</h4>
+<div>
+curl -v -X POST &#39;https://fcde83ce-ae2a-4165-bf7f-c2bb5f7fe762.mock.pstmn.io/webhooks&#39; -H &#39;Accept: */*&#39; -H &#39;Content-Type: application/json&#39; -d &#39;{
+    &quot;webhook_url&quot;: &quot;https://api.example.com/webhooks/listener-for-payment-gateway&quot;,
+    &quot;events&quot;: [
+        &quot;payment.created&quot;,
+        &quot;payment.updated&quot;,
+        &quot;transaction.created&quot;,
+        &quot;transaction.updated&quot;,
+        &quot;refund.created&quot;,
+        &quot;refund.updated&quot;
+    ]
+}&#39;
+</div>
