@@ -2,6 +2,8 @@ package com.rest;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
@@ -65,7 +67,10 @@ public class TestRest{
 	} 
 			
 
+	@Story("Story-01")
 	@Test
+	@Description("GET API")
+	@Severity(SeverityLevel.NORMAL)
 	public void validate_response_using_hamcrest() {
 		String name1 = given().filter(new AllureRestAssured()).
 				when().
@@ -80,7 +85,10 @@ public class TestRest{
 				assertThat(name1 , equalTo("Cat Facts"));
 	}
 	
+	@Story("Story-01")
 	@Test
+	@Description("GET API")
+	@Severity(SeverityLevel.NORMAL)
 	public void extract_resp() {
 		Response resp = given().filter(new AllureRestAssured()).
 		log().headers().
@@ -95,7 +103,10 @@ public class TestRest{
 		System.out.println("Response is " +resp.asString());
 	}
 	
+	@Story("Story-01")
 	@Test
+	@Description("GET API")
+	@Severity(SeverityLevel.NORMAL)
 	public void extract_single_resp() {
 			Response name = given().filter(new AllureRestAssured()).
 			when().
@@ -111,7 +122,10 @@ public class TestRest{
 			System.out.println("entries" +jsonpath.getString("entries.Description[0]"));		
 	}
 	
+	@Story("Story-01")
 	@Test
+	@Description("POST API")
+	@Severity(SeverityLevel.NORMAL)
 	public void validate_post_request() {
 		String payload = "{\r\n"
 				+ "  \"webhook_url\": \"https://api.example.com/webhooks/listener-for-payment-gateway\",\r\n"
@@ -128,7 +142,10 @@ public class TestRest{
 				
 	}
 	
+	@Story("Story-01")
 	@Test
+	@Description("PUT API")
+	@Severity(SeverityLevel.NORMAL)
 	public void validate_put_request() {
 	String payload1 = "{\r\n"
 			+ "  \"url\": \"https://api.example.com/webhooks/new-listener-for-payment-gateway\",\r\n"
